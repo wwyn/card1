@@ -1,0 +1,111 @@
+/* pages/dynamic/dynamic.wxss */
+.dynamic {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.headUrl {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 18rpx;
+}
+.dynamic-box {
+  flex:1;
+}
+.dynamic-title {
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.dynamic-imgList {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap:wrap;
+}
+.dynamic-img {
+  width: 190rpx;
+  height: 190rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+}
+.dynamic-img>image {
+  height: 200rpx;
+}
+image {
+  width: 100%;
+  vertical-align: middle;
+}
+.dynamic-time {
+  font-size: 28rpx;
+  color: #ccc;
+}
+.operation {
+  font-size: 30rpx;
+  color: #ccc;
+} 
+.operation image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.line {
+  margin: 0 20rpx;
+}
+.likeList {
+  background-color: rgba(228, 235, 236,.5);
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color:rgb(9, 157, 243);
+   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.commentList {
+   background-color: rgba(228, 235, 236,.5);
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color:rgb(9, 157, 243);
+}
+.like {
+  width: 40rpx;
+  height: 40rpx; 
+
+}
+.triangle_border_up{
+    width:0;
+    height:0;
+    border-width:0 20rpx 20rpx;
+    border-style:solid;
+    border-color:transparent transparent rgba(228, 235, 236,.5);/*透明 透明  灰*/
+    position:relative;
+   left: 28rpx;
+}
+.likeName {
+ margin-left: 10rpx;
+}
+.commentinput {
+  padding: 20rpx;
+  box-sizing: border-box;
+  background-color: rgba(228, 235, 236,.5);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+input {
+  background-color: #fff;
+  flex: 1;
+  border-radius: 10rpx;
+  padding: 10rpx 20rpx;
+}
+.send {
+  font-size: 34rpx;
+  color: rgb(112, 112, 112);
+  margin-left: 10rpx;
+}

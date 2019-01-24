@@ -1,0 +1,18 @@
+<!-- my.js -->
+<view>
+    <view class="my-bgc"></view>
+    <view class="my-message">
+      <image src="http://boom-static.static.cceato.com/styleimg/11-7.png"></image>
+      <view class="my-name">昵称</view>
+      <view class="address flex" bindtap='addAdress'>
+        <text>我的收货地址</text>
+        <text>></text>
+      </view>
+    </view>
+    <view class="tabList-box flex">
+      <view class="tabList"  wx:for="{{tabList}}" wx:for-item="item" wx:key="index" bindtap='go_order' data-id="{{index +1}}">
+        <image src="/statics/image/tabbar/like_red_fill.png"></image>
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+</view>

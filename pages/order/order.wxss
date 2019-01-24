@@ -1,0 +1,17 @@
+/* pages/order/order.wxss */
+.active {
+  border-bottom: 1px solid rgb(11, 95, 252);
+}
+.orderList {
+  font-size: 28rpx;
+  border-bottom: 1px solid rgb(228, 242, 252);
+  text-align: center;
+  display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+.orderList view {
+  width: 100%;
+  padding: 20rpx 0;
+}

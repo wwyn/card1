@@ -1,0 +1,57 @@
+.my-bgc {
+  width: 100%;
+  height: 400rpx;
+  background-color: rgb(8, 140, 228);
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}
+.my-message {
+  background-color: #fff;
+  border-radius: 20rpx;
+  position: relative;
+  margin: 0 20rpx;
+  text-align: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: 1px solid rgb(228, 242, 252);
+  box-shadow: 2px 2px 6px 1px rgb(228, 242, 252); 
+  margin-top: -200rpx;
+}
+.my-message image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100%;
+  margin-top: -80rpx;  
+}
+.my-name {
+  font-size: 30rpx;
+  text-align: center;
+  margin: 40rpx;
+}
+.address {
+  font-size: 28rpx;
+  border-top: 1px solid rgb(230, 227, 227);
+  padding-top: 20rpx;
+}
+.tabList {
+  margin-right: 20rpx;
+   border: 1px solid rgb(228, 242, 252);
+  box-shadow: 2px 2px 6px 1px rgb(228, 242, 252); 
+  font-size: 28rpx;
+  text-align: center;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+}
+.tabList-box {
+  padding: 40rpx 20rpx;
+  box-sizing: border-box;
+}
+.tabList-box .tabList:nth-child(4) {
+  margin-right: 0;
+}
+.tabList image {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-bottom: 10rpx;
+}

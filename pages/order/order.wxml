@@ -1,0 +1,6 @@
+<!--pages/order/order.wxml-->
+<view>
+  <view class="orderList">
+    <view bindtap='orderClick' class="{{current==index?'active':''}}" data-cur="{{index}}" wx:for="{{orderList}}" wx:key="index">{{item}}</view>
+  </view>
+</view>

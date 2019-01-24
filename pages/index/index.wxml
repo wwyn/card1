@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view wx:if="{{!showCard}}" class="cards-index">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="card" bindtap='gotoCard'>
+        <image src="/statics/image/tabbar/news_white.png"></image>
+      </view>
+      <view class="lick" bindtap='headerLick'>
+        <image src="{{lick?'/statics/image/tabbar/favor_green.png':'/statics/image/tabbar/favor.png'}}"></image>
+        <text>{{lickNum}}</text>
+      </view>
+      <view class="cards">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="title">
+    | <text>个人信息</text>
+  </view>
+  <view class="userInfo">
+    <view class="unfold" bindtap='togglePhone'>{{ unfold ? '收起名片信息-':'展开名片信息+'}}</view>
+    <view  wx:if="{{unfold}}" wx:for="{{messageList}}" wx:for-item="item" wx:key="index">
+       <view class="phone-number flex">
+      <view class="phone">
+        <image></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="number">
+        <text>{{item.describe}}</text>
+        <text bindtap='handerDial' data-type="{{item.name}}">{{item.name==='手机'?'拨打':'复制'}}</text>
+      </view>
+    </view>
+    </view>
+    <view class="flex">
+      <button class="share" open-type="share">分享名片</button>
+      <button bindtap='handerSave'>存入手机通讯录</button>
+    </view>
+  </view>
+  <view>
+    <view>最近浏览人数{{heaList.length}}人</view>
+    <view class="heaList">
+      <view wx:for="{{heaList}}" wx:for-item="item" wx:key="index">
+        <image src="{{item.url}}"></image>
+      </view>
+    </view>
+     <view class="title">
+      | <text>个人简介</text>
+        <view class="text">还没有简历</view>
+    </view>
+     <view class="title">
+      | <text>我的照片</text>
+        <view class="text">还没有上传照片</view>
+    </view>
+  </view>
+  <view class="user-card">制作个人名片</view>
+</view>
+<view wx:else class="card-list" bindtap='gotoIndex'>
+  <view>2018-12-25</view>
+  <view class="card-box">
+    <view class="flex">
+      <view>上海辰商软件科技有限公司</view>
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view class="card-name">wxp</view>
+    <view class="card-job">前端工程师</view>
+    <view class="card-phone">13766552782</view>
+    <view class="card-emil">99999999@qq.com</view>
+    <view class="flex">
+      <view class="card-rank">No.1</view>
+      <view class="tools">
+        <text>置顶</text>
+        <text>屏蔽</text>
+      </view>
+    </view>
+  </view>
+  <view class="footer">已经到底了</view>
+</view>

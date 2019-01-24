@@ -1,0 +1,71 @@
+<!--pages/official/official.wxml-->
+<view>
+  <swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular="true"
+  >
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="company flex pad">
+    <view class="company-name">
+      <view>上海辰盟科技有限公司</view>
+      <view class="company-adress">
+        <image src="/statics/image/tabbar/location.png"></image>
+        <view>上海漕河泾大厦</view>
+      </view>
+    </view>
+    <view class="logo">
+      <image src="/statics/image/tabbar/logo.png"></image>
+    </view>
+  </view>
+  <view class="enterprise">
+    <view class="enterprise-describe">
+      <view class="enterprise-title">
+        | 企业简介
+      </view>
+      <view class="enterprise-content">
+        上海辰盟科技有限公司是一家数据智能技术服务有限公司，专注大数据和人工智能技术并将其应用于商业领域
+      </view>
+    </view>
+    <view class="enterprise-describe">
+      <view class="enterprise-title">
+        | 企业资讯
+      </view>
+      <view class="enterprise-content">
+        <image src="http://boom-static.static.cceato.com/styleimg/11-7.png"></image>
+        <view class="flex">
+          <view class="enterprise-name">宁波上市公司</view>
+          <view class="enterprise-time">2019-01-03</view>
+        </view>
+        上海辰盟科技有限公司是一家数据智能技术服务有限公司，专注大数据和人工智能技术并将其应用于商业领域
+      </view>
+    </view>
+    <view class="enterprise-describe">
+      <view class="enterprise-title">
+        | 合作伙伴
+      </view>
+      <view class="enterprise-content">
+        <view class="flex">
+         <image class="cooperation" src="http://boom-static.static.cceato.com/styleimg/11-7.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="enterprise-describe">
+      <view class="enterprise-title">
+        | 联系我们
+      </view>
+      <view class="enterprise-content">
+        <view class="flex">
+         <image class="cooperation" src="http://boom-static.static.cceato.com/styleimg/11-7.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

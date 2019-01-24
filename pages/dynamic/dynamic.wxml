@@ -1,0 +1,48 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view>
+  <view class="dynamic" wx:for="{{ friendsList }}" wx:for-item="item" wx:key="index">
+    <view>
+      <image class="headUrl" src="{{item.headUrl}}"></image>
+    </view>
+    <view class="dynamic-box">
+      <view class="dynamic-title">{{item.title}}</view>
+      <view class="dynamic-imgList">
+        <view class="dynamic-img" wx:for="{{ item.urlList }}" wx:for-item="item" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+      </view>
+      <view class="flex">
+        <view class="dynamic-time">{{item.time}}</view>
+        <view class="operation flex">
+          <view bindtap='giveLike'>
+            <image src="{{isLike?'/statics/image/tabbar/like_red_fill.png':'/statics/image/tabbar/like.png'}}"></image>
+            赞
+          </view>
+          <view class="line">|</view>
+          <view bindtap='comment'>
+            <image src="/statics/image/tabbar/form.png"></image>
+            评论
+          </view>
+        </view> 
+      </view>
+      <view wx:if="{{likeList.length>0||commentList.length>0}}">
+        <view class="triangle_border_up">
+            <span></span>
+        </view>
+        <view class="likeList" wx:if="{{likeList.length>0}}">
+          <image class="like" src="/statics/image/tabbar/like_green.png"></image>
+          <view class="likeName"  wx:for="{{ likeList }}" wx:for-item="item" wx:key="index">
+            {{item}}、
+          </view>
+        </view>
+        <view class="commentList" wx:for="{{commentList}}" wx:for-item="item" wx:key="index">
+          {{item.name}}：{{item.content}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{showInput}}" class="commentinput flex">
+  <input auto-focus placeholder='输入框' bindconfirm="inputVal" value="{{inputVal}}" bindblur='onBlur'></input>
+  <view class="send" bindtap='send'>发送</view>
+</view>

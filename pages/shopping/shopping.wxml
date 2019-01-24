@@ -1,0 +1,18 @@
+<!--pages/shopping/shopping.wxml-->
+<view>
+  <view class="shop-hrader">
+    <image src="/statics/image/tabbar/my_fill.png" bindtap='personalCenter'></image>
+  </view>
+  <view class="tabList">
+    <view class="flex">
+      <view bindtap='toggleTab' class="{{current==index?'active':''}}" data-cur="{{index}}" wx:for="{{tabList}}" wx:for-item="item" wx:key="index">{{item}}</view>
+    </view>
+    <view class="tabcard">
+      <view class="tab-card" wx:for="{{cardsList}}" wx:for-item="item" wx:key="index">
+        <image src="{{item.url}}"></image>
+        <view class="tab-title">{{item.title}}</view>
+        <view class="tab-money">{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</view>

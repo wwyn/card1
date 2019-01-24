@@ -1,0 +1,73 @@
+/* pages/official/official.wxss */
+swiper {
+  height: 1000rpx;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+.company {
+  box-shadow: 0 0 10px 2px #ccc;
+}
+.company-name {
+  font-size: 32rpx;
+}
+.company-adress {
+  font-size: 28rpx;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+.company-adress image {
+  width: 50rpx;
+  height: 50rpx;
+}
+.logo {
+  width: 100rpx;
+  height: 60rpx;
+}
+image {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.enterprise {
+  margin-top: 20rpx;
+  border-top: 1px solid #ccc;
+  font-size: 32rpx;
+}
+.enterprise-describe {
+  padding: 40rpx 0 40rpx 20rpx;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 2px #ccc;
+  margin-bottom: 20rpx;
+}
+.enterprise-title {
+  border-bottom: 1px solid rgb(11, 95, 252);
+  padding:0 0 20rpx 0;
+}
+.enterprise-content {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  padding-right: 20rpx;
+  box-sizing: border-box;
+}
+.enterprise-content image {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.enterprise-time {
+  font-size: 28rpx;
+  color: #ccc;
+}
+.enterprise-name {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.enterprise-content .cooperation {
+  width: 30%;
+  height: 100rpx;
+}
